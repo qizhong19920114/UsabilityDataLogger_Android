@@ -1,0 +1,156 @@
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 15 in /Users/zhongqi/Downloads/TabExample/AndroidManifest.xml    
+Invalid attribute value syntax for android:name: = "android.permission.WRITE_EXTERNAL_STORAGE" /
+rm -f /Users/zhongqi/Downloads/TabExample/libs/arm64-v8a/lib*.so /Users/zhongqi/Downloads/TabExample/libs/armeabi/lib*.so /Users/zhongqi/Downloads/TabExample/libs/armeabi-v7a/lib*.so /Users/zhongqi/Downloads/TabExample/libs/armeabi-v7a-hard/lib*.so /Users/zhongqi/Downloads/TabExample/libs/mips/lib*.so /Users/zhongqi/Downloads/TabExample/libs/mips64/lib*.so /Users/zhongqi/Downloads/TabExample/libs/x86/lib*.so /Users/zhongqi/Downloads/TabExample/libs/x86_64/lib*.so
+rm -f /Users/zhongqi/Downloads/TabExample/libs/arm64-v8a/gdbserver /Users/zhongqi/Downloads/TabExample/libs/armeabi/gdbserver /Users/zhongqi/Downloads/TabExample/libs/armeabi-v7a/gdbserver /Users/zhongqi/Downloads/TabExample/libs/armeabi-v7a-hard/gdbserver /Users/zhongqi/Downloads/TabExample/libs/mips/gdbserver /Users/zhongqi/Downloads/TabExample/libs/mips64/gdbserver /Users/zhongqi/Downloads/TabExample/libs/x86/gdbserver /Users/zhongqi/Downloads/TabExample/libs/x86_64/gdbserver
+rm -f /Users/zhongqi/Downloads/TabExample/libs/arm64-v8a/gdb.setup /Users/zhongqi/Downloads/TabExample/libs/armeabi/gdb.setup /Users/zhongqi/Downloads/TabExample/libs/armeabi-v7a/gdb.setup /Users/zhongqi/Downloads/TabExample/libs/armeabi-v7a-hard/gdb.setup /Users/zhongqi/Downloads/TabExample/libs/mips/gdb.setup /Users/zhongqi/Downloads/TabExample/libs/mips64/gdb.setup /Users/zhongqi/Downloads/TabExample/libs/x86/gdb.setup /Users/zhongqi/Downloads/TabExample/libs/x86_64/gdb.setup
+[armeabi] Compile thumb  : EventInjector <= EventInjector.c
+/Users/zhongqi/Downloads/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc -MMD -MP -MF /Users/zhongqi/Downloads/TabExample/obj/local/armeabi/objs/EventInjector/EventInjector.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I/Users/zhongqi/Downloads/TabExample/jni -DANDROID  -Wa,--noexecstack -Wformat -Werror=format-security    -I/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include -c  /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c -o /Users/zhongqi/Downloads/TabExample/obj/local/armeabi/objs/EventInjector/EventInjector.o 
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:28:0: warning: "EV_VERSION" redefined [enabled by default]
+ #define EV_VERSION  0x010001
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:27:0: note: this is the location of the previous definition
+ #define EV_VERSION 0x010000
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:83:0: warning: "EVIOCGREP" redefined [enabled by default]
+ #define EVIOCGREP  _IOR('E', 0x03, unsigned int[2]) /* get repeat settings */
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:46:0: note: this is the location of the previous definition
+ #define EVIOCGREP _IOR('E', 0x03, int[2])  
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:84:0: warning: "EVIOCSREP" redefined [enabled by default]
+ #define EVIOCSREP  _IOW('E', 0x03, unsigned int[2]) /* set repeat settings */
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:47:0: note: this is the location of the previous definition
+ #define EVIOCSREP _IOW('E', 0x03, int[2])  
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:86:0: warning: "EVIOCGKEYCODE" redefined [enabled by default]
+ #define EVIOCGKEYCODE  _IOR('E', 0x04, unsigned int[2])        /* get keycode */
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:48:0: note: this is the location of the previous definition
+ #define EVIOCGKEYCODE _IOR('E', 0x04, int[2])  
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:88:0: warning: "EVIOCSKEYCODE" redefined [enabled by default]
+ #define EVIOCSKEYCODE  _IOW('E', 0x04, unsigned int[2])        /* set keycode */
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:49:0: note: this is the location of the previous definition
+ #define EVIOCSKEYCODE _IOW('E', 0x04, int[2])  
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:127:0: warning: "EVIOCGBIT" redefined [enabled by default]
+ #define EVIOCGBIT(ev,len) _IOC(_IOC_READ, 'E', 0x20 + (ev), len) /* get event bits */
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:60:0: note: this is the location of the previous definition
+ #define EVIOCGBIT(ev,len) _IOC(_IOC_READ, 'E', 0x20 + ev, len)  
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:128:0: warning: "EVIOCGABS" redefined [enabled by default]
+ #define EVIOCGABS(abs)  _IOR('E', 0x40 + (abs), struct input_absinfo) /* get abs value/limits */
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:61:0: note: this is the location of the previous definition
+ #define EVIOCGABS(abs) _IOR('E', 0x40 + abs, struct input_absinfo)  
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:129:0: warning: "EVIOCSABS" redefined [enabled by default]
+ #define EVIOCSABS(abs)  _IOW('E', 0xc0 + (abs), struct input_absinfo) /* set abs value/limits */
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:62:0: note: this is the location of the previous definition
+ #define EVIOCSABS(abs) _IOW('E', 0xc0 + abs, struct input_absinfo)  
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:354:0: warning: "KEY_DIRECTION" redefined [enabled by default]
+ #define KEY_DIRECTION  KEY_ROTATE_DISPLAY
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:242:0: note: this is the location of the previous definition
+ #define KEY_DIRECTION 153
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:426:0: warning: "KEY_SWITCHVIDEOMODE" redefined [enabled by default]
+ #define KEY_SWITCHVIDEOMODE 227 /* Cycle between available video
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:323:0: note: this is the location of the previous definition
+ #define KEY_SWITCHVIDEOMODE 236
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:428:0: warning: "KEY_KBDILLUMTOGGLE" redefined [enabled by default]
+ #define KEY_KBDILLUMTOGGLE 228
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:324:0: note: this is the location of the previous definition
+ #define KEY_KBDILLUMTOGGLE 237
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:429:0: warning: "KEY_KBDILLUMDOWN" redefined [enabled by default]
+ #define KEY_KBDILLUMDOWN 229
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:325:0: note: this is the location of the previous definition
+ #define KEY_KBDILLUMDOWN 238
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:430:0: warning: "KEY_KBDILLUMUP" redefined [enabled by default]
+ #define KEY_KBDILLUMUP  230
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:326:0: note: this is the location of the previous definition
+ #define KEY_KBDILLUMUP 239
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:502:0: warning: "BTN_A" redefined [enabled by default]
+ #define BTN_A   BTN_SOUTH
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:376:0: note: this is the location of the previous definition
+ #define BTN_A 0x130
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:504:0: warning: "BTN_B" redefined [enabled by default]
+ #define BTN_B   BTN_EAST
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:377:0: note: this is the location of the previous definition
+ #define BTN_B 0x131
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:507:0: warning: "BTN_X" redefined [enabled by default]
+ #define BTN_X   BTN_NORTH
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:379:0: note: this is the location of the previous definition
+ #define BTN_X 0x133
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:509:0: warning: "BTN_Y" redefined [enabled by default]
+ #define BTN_Y   BTN_WEST
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:380:0: note: this is the location of the previous definition
+ #define BTN_Y 0x134
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:55:0:
+/Users/zhongqi/Downloads/TabExample/jni/EventInjector.h:780:0: warning: "KEY_MAX" redefined [enabled by default]
+ #define KEY_MAX   0x2ff
+ ^
+In file included from /Users/zhongqi/Downloads/TabExample/jni/EventInjector.c:45:0:
+/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/include/linux/input.h:513:0: note: this is the location of the previous definition
+ #define KEY_MAX 0x1ff
+ ^
+[armeabi] SharedLibrary  : libEventInjector.so
+/Users/zhongqi/Downloads/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++ -Wl,-soname,libEventInjector.so -shared --sysroot=/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm /Users/zhongqi/Downloads/TabExample/obj/local/armeabi/objs/EventInjector/EventInjector.o -lgcc -no-canonical-prefixes  -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -mthumb  -L/Users/zhongqi/Downloads/android-ndk-r10e/platforms/android-19/arch-arm/usr/lib -llog -lc -lm -o /Users/zhongqi/Downloads/TabExample/obj/local/armeabi/libEventInjector.so
+[armeabi] Install        : libEventInjector.so => libs/armeabi/libEventInjector.so
+install -p /Users/zhongqi/Downloads/TabExample/obj/local/armeabi/libEventInjector.so /Users/zhongqi/Downloads/TabExample/libs/armeabi/libEventInjector.so
+/Users/zhongqi/Downloads/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  /Users/zhongqi/Downloads/TabExample/libs/armeabi/libEventInjector.so

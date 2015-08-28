@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Select the data type to record"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/checkBox_key"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:text="Keystroke" />
+
+    <CheckBox
+        android:id="@+id/checkBox_url"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:checked="true"
+        android:text="URL Visit" />
+
+    <CheckBox
+        android:id="@+id/checkBox_touch"
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:checked="true"
+        android:text="Touch" />
+
+    <CheckBox
+        android:id="@+id/checkBox_runtime"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:checked="true"
+        android:text="Run Time" />
+
+    <Button
+        android:id="@+id/button_save_setting"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/button_clear_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Clear All Data" />
+
+</LinearLayout>

@@ -1,0 +1,2 @@
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 15 in /Users/zhongqi/Downloads/TabExample/AndroidManifest.xml    
+[armeabi] Compile thumb  : EventInjector <= EventInjector.c
