@@ -2,7 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/light_linen"
     android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -10,7 +23,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="Select the data type to record"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#003366" />
 
     <CheckBox
         android:id="@+id/checkBox_key"
@@ -19,7 +33,8 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
         android:checked="true"
-        android:text="Keystroke" />
+        android:text="Keystroke"
+        android:textColor="#003366" />
 
     <CheckBox
         android:id="@+id/checkBox_url"
@@ -27,7 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:checked="true"
-        android:text="URL Visit" />
+        android:text="URL Visit"
+        android:textColor="#003366" />
 
     <CheckBox
         android:id="@+id/checkBox_touch"
@@ -35,7 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:checked="true"
-        android:text="Touch" />
+        android:text="Touch"
+        android:textColor="#003366" />
 
     <CheckBox
         android:id="@+id/checkBox_runtime"
@@ -43,22 +60,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:checked="true"
-        android:text="Run Time" />
+        android:text="Run Time"
+        android:textColor="#003366" />
 
     <Button
         android:id="@+id/button_save_setting"
-        android:layout_width="129dp"
-        android:layout_height="wrap_content"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:text="Save" />
+        android:background="@drawable/button_blue"
+        android:text="Save"
+        android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/button_clear_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Clear All Data" />
+
 
 </LinearLayout>

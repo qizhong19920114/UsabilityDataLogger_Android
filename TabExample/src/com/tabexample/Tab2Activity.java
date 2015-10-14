@@ -2,11 +2,14 @@ package com.tabexample;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import android.provider.Browser;
 
 import java.io.InputStreamReader;
-import java.sql.Date;
+import java.nio.channels.FileChannel;
+import java.util.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -36,6 +39,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
@@ -48,7 +52,9 @@ import android.app.ListActivity;
 public class Tab2Activity  extends Activity
 {
 		private static final String TAG = "UDL_tab2_Activity";
-    	
+		Button clearDataButton;
+		Button expoorDataButton;
+		TextView exportDataDir;
         @Override
         public void onCreate(Bundle savedInstanceState)
         {
@@ -109,8 +115,128 @@ public class Tab2Activity  extends Activity
             {
                 Log.i("CreateDir","App dir already exists");
             }
-                       
+            
+            
+            clearDataButton=(Button)findViewById(R.id.button_clear_data);
+            
+            clearDataButton.setOnClickListener(new View.OnClickListener() {
+                
+                public void onClick(View v)
+                {
+
+                	
+                	Log.v(TAG, "clear data");
+                	Toast.makeText(getBaseContext(), "Clear all data", Toast.LENGTH_SHORT).show();
+
+                	
+          		   File rootDirect = new File(Environment.getExternalStorageDirectory() + "/");
+         		   File file = new File(rootDirect,"RecordStartMarker.txt");
+
+         		    if(!file.exists()) //clear when not during recording
+                	
+                	{
+	        			File subjectDirect_activity = new File(Environment.getExternalStorageDirectory() + "/ActivityMonitor");
+	        			File file_activity = new File(subjectDirect_activity,"activityLog.txt");
+	        			file_activity.delete();
+	        			
+	        			File subjectDirect_activity_raw = new File(Environment.getExternalStorageDirectory() + "/ActivityMonitor");
+	        			File file_activity_raw = new File(subjectDirect_activity_raw,"activityLogRaw.txt");
+	        			file_activity_raw.delete();
+	                	
+	                	File subjectDirect_touch = new File(Environment.getExternalStorageDirectory() + "/");
+	        			File file_touch = new File(subjectDirect_touch,"touchRecord.txt");
+	        			file_touch.delete();	
+	        			
+	        			File subjectDirect_touch_raw = new File(Environment.getExternalStorageDirectory() + "/");
+	        			File file_touch_raw = new File(subjectDirect_touch_raw,"touchRecordRaw.txt");
+	        			file_touch_raw.delete();
+	        			
+	        			File subjectDirect_url_raw = new File(Environment.getExternalStorageDirectory() + "/");
+	        			File file_url_raw = new File(subjectDirect_url_raw,"urlDataRaw.txt");
+	        			file_touch_raw.delete();
+	                	
+	                	File subjectDirect_keyboard = new File(Environment.getExternalStorageDirectory() + "/uKeyboardLogger/"+"keyboardRecord");
+	        			File file_keyboard = new File(subjectDirect_keyboard,"KeyEvent-keyboardRecord.txt");
+	        			file_keyboard.delete();                              	
+                	}
+                	else 
+                	{
+                		Toast.makeText(getBaseContext(), "Can't clear during recording", Toast.LENGTH_SHORT).show();
+                	}
+                }
+            });
+                  
+            
+            expoorDataButton=(Button)findViewById(R.id.buttonSaveData);
+            
+            expoorDataButton.setOnClickListener(new View.OnClickListener() {
+                
+                public void onClick(View v)
+                {
+                	Log.v(TAG, "exportData");
+                	
+            		String DestFolderName = "DataLog-"+ new SimpleDateFormat("MM-dd-HH-mm-ss").format(new Date());
+        					
+                	
+        			File dataDestDirect = new File(Environment.getExternalStorageDirectory() + "/MobildDataLogger/data/"+DestFolderName);
+        			dataDestDirect.mkdir() ;
+        			
+        			File activitySrcDirect = new File(Environment.getExternalStorageDirectory() + "/ActivityMonitor");
+        			File keyboardSrcDirect = new File(Environment.getExternalStorageDirectory() + "/uKeyboardLogger/keyboardRecord");
+        			File touchSrcDirect = new File(Environment.getExternalStorageDirectory() + "/");
+        			File urlSrcDirect = new File(Environment.getExternalStorageDirectory() + "/");
+        			
+        			File activitySrcFile = new File(activitySrcDirect,"activityLogRaw.txt");
+        			File keyboardSrcFile = new File(keyboardSrcDirect,"KeyEvent-keyboardRecord.txt");
+        			File touchSrcFile = new File(touchSrcDirect,"touchRecordRaw.txt");
+        			File urlSrcFile = new File(touchSrcDirect,"urlDataRaw.txt");
+        			
+        			File activityDestFile = new File(dataDestDirect,"activityLogRaw.txt");
+        			File keyboardDestile = new File(dataDestDirect,"KeyEvent-keyboardRecord.txt");
+        			File touchdDestFile = new File(dataDestDirect,"touchRecordRaw.txt");
+        			File urlDestFile = new File(dataDestDirect,"urlDataRaw.txt");
+        			       			       			
+                	//Copy Activity
+        			try {
+        				copy(activitySrcFile, activityDestFile);
+        			}
+    				catch (IOException e) {
+    					e.printStackTrace();
+    				}
+                	//Copy keyboard
+        			try {
+        				copy(keyboardSrcFile, keyboardDestile);
+        			}
+    				catch (IOException e) {
+    					e.printStackTrace();
+    				}               	
+                	//Copy touch
+        			try {
+        				copy(touchSrcFile, touchdDestFile);
+        			}
+    				catch (IOException e) {
+    					e.printStackTrace();
+    				}       			
+                	//Copy url
+        			try {
+        				copy(urlSrcFile, urlDestFile);
+        			}
+    				catch (IOException e) {
+    					e.printStackTrace();
+    				}
+                	
+        			//Toast.makeText(getApplicationContext(), "Export raw data successfully!", Toast.LENGTH_SHORT).show();
+                
+        			//exportDataDir = (TextView) findViewById(R.id.textViewDir);
+        			//exportDataDir.setText("Data is saved at: "+"/sdcard/MobileDataLogger/"+ DestFolderName);
+        			String toast_str = "Data is saved at: "+"/sdcard/MobileDataLogger/"+ DestFolderName; 
+        			Toast.makeText(getBaseContext(), toast_str, Toast.LENGTH_LONG).show();
+                }
+            });
         }  
+        
+        
+        
         
         @Override
         public void onBackPressed() {
@@ -386,9 +512,21 @@ public class Tab2Activity  extends Activity
             //==================================================================================================
             // The code below display the read data 
             //==================================================================================================                                 
+            //Find the smallest size among appName and appTouch to prevent out of range crash
+             
+            
+            //Log.e("Test", "appNameList.size() = " + appNameList.size());
+            //Log.e("Test", "appTouchCnt.size() = " + appTouchCnt.size()); 
+            Integer listCnt_smallest =  appNameList.size();
+            if (appNameList.size() > appTouchCnt.size())
+            {
+            	listCnt_smallest = appTouchCnt.size(); 
+            }
+             
+             
             Integer rcount = 0;            
             int idx = 0;
-            while (rcount < appNameList.size()) 
+            while (rcount < listCnt_smallest) 
             {
 	            // Create the table row
 	            TableRow tr = new TableRow(this);
@@ -618,4 +756,13 @@ public class Tab2Activity  extends Activity
  		   return file.exists();
     	}
        	
+		public void copy(File src, File dst) throws IOException {
+		    FileInputStream inStream = new FileInputStream(src);
+		    FileOutputStream outStream = new FileOutputStream(dst);
+		    FileChannel inChannel = inStream.getChannel();
+		    FileChannel outChannel = outStream.getChannel();
+		    inChannel.transferTo(0, inChannel.size(), outChannel);
+		    inStream.close();
+		    outStream.close();
+		}
 }

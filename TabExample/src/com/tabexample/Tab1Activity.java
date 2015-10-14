@@ -53,8 +53,6 @@ public class Tab1Activity  extends Activity
 		private int notificationID = 100;
 		
 		Button startButton;
-		Button expoorDataButton;
-		TextView exportDataDir;
 		private static final String TAG = "UDL_tab1_Activity";
 		
 		boolean m_bMonitorOn = false; 
@@ -113,70 +111,7 @@ public class Tab1Activity  extends Activity
 	            }
             });
                           
-            expoorDataButton=(Button)findViewById(R.id.buttonSaveData);
             
-            expoorDataButton.setOnClickListener(new View.OnClickListener() {
-                
-                public void onClick(View v)
-                {
-                	Log.v(TAG, "exportData");
-                	
-            		String DestFolderName = "DataLog-"+ new SimpleDateFormat("MM-dd-HH-mm-ss").format(new Date());
-        					
-                	
-        			File dataDestDirect = new File(Environment.getExternalStorageDirectory() + "/MobildDataLogger/data/"+DestFolderName);
-        			dataDestDirect.mkdir() ;
-        			
-        			File activitySrcDirect = new File(Environment.getExternalStorageDirectory() + "/ActivityMonitor");
-        			File keyboardSrcDirect = new File(Environment.getExternalStorageDirectory() + "/uKeyboardLogger/keyboardRecord");
-        			File touchSrcDirect = new File(Environment.getExternalStorageDirectory() + "/");
-        			File urlSrcDirect = new File(Environment.getExternalStorageDirectory() + "/");
-        			
-        			File activitySrcFile = new File(activitySrcDirect,"activityLogRaw.txt");
-        			File keyboardSrcFile = new File(keyboardSrcDirect,"KeyEvent-keyboardRecord.txt");
-        			File touchSrcFile = new File(touchSrcDirect,"touchRecordRaw.txt");
-        			File urlSrcFile = new File(touchSrcDirect,"urlDataRaw.txt");
-        			
-        			File activityDestFile = new File(dataDestDirect,"activityLogRaw.txt");
-        			File keyboardDestile = new File(dataDestDirect,"KeyEvent-keyboardRecord.txt");
-        			File touchdDestFile = new File(dataDestDirect,"touchRecordRaw.txt");
-        			File urlDestFile = new File(dataDestDirect,"urlDataRaw.txt");
-        			       			       			
-                	//Copy Activity
-        			try {
-        				copy(activitySrcFile, activityDestFile);
-        			}
-    				catch (IOException e) {
-    					e.printStackTrace();
-    				}
-                	//Copy keyboard
-        			try {
-        				copy(keyboardSrcFile, keyboardDestile);
-        			}
-    				catch (IOException e) {
-    					e.printStackTrace();
-    				}               	
-                	//Copy touch
-        			try {
-        				copy(touchSrcFile, touchdDestFile);
-        			}
-    				catch (IOException e) {
-    					e.printStackTrace();
-    				}       			
-                	//Copy url
-        			try {
-        				copy(urlSrcFile, urlDestFile);
-        			}
-    				catch (IOException e) {
-    					e.printStackTrace();
-    				}
-                	
-        			//Toast.makeText(getApplicationContext(), "Export raw data successfully!", Toast.LENGTH_SHORT).show();
-                
-        			exportDataDir = (TextView) findViewById(R.id.textViewDir);
-        			exportDataDir.setText("Data is saved at: "+"/sdcard/MobileDataLogger/"+ DestFolderName);
-                }
-            });
             
             
         }
@@ -623,15 +558,7 @@ public class Tab1Activity  extends Activity
 			}
 
 		//This function will be called for export raw data
-		public void copy(File src, File dst) throws IOException {
-		    FileInputStream inStream = new FileInputStream(src);
-		    FileOutputStream outStream = new FileOutputStream(dst);
-		    FileChannel inChannel = inStream.getChannel();
-		    FileChannel outChannel = outStream.getChannel();
-		    inChannel.transferTo(0, inChannel.size(), outChannel);
-		    inStream.close();
-		    outStream.close();
-		}
+
 		
 		
 }

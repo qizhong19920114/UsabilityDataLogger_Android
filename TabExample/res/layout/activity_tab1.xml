@@ -2,81 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/light_linen"
     android:orientation="vertical" >
 
     <TextView
-        android:layout_width="332dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Click the button below to start data logging:"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:id="@+id/textView1"
+        android:layout_width="303dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="   Click the button below to start: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#003366"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/buttonStart"
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
+        android:layout_width="196dp"
+        android:layout_height="151dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:text="Start" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="The following data will be saved"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:layout_width="219dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:gravity="left"
-        android:text="1. Keystroke"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:gravity="left"
-        android:text="2. URL Visit"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:gravity="left"
-        android:text="3. Touch"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:gravity="left"
-        android:text="4. Run Time"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/buttonSaveData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Click to export raw data" />
-
-    <TextView
-        android:id="@+id/textViewDir"
-        android:layout_width="194dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round"
+        android:text="Start"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

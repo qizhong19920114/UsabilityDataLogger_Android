@@ -2,47 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/light_linen"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
         android:text="About:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#003366" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="327dp"
-        android:layout_height="206dp"
+        android:layout_width="261dp"
+        android:layout_height="158dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:layout_weight="0.01"
+        android:layout_weight="0.16"
         android:text="Usability Data Logger is intended to help user experience researcher, human computer interaction researcher, developer and product manager to collect user interaction data with their apps and improve user experience"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#003366"
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:text="Help:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#003366" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="329dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_width="268dp"
+        android:layout_height="148dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:layout_weight="0.04"
-        android:text="Please visit http://www.ueseo.net/usability-data-logger-for-android-tutorial.html for help"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_weight="0.09"
+        android:text="Please visit                                  http://www.ueseo.net/usability-data-logger-for-android-tutorial.html for help"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#003366"
+        android:textSize="17sp" />
 
 </LinearLayout>

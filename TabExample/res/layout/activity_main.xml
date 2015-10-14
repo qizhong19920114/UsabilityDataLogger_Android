@@ -19,11 +19,12 @@
                      android:layout_width="fill_parent">
                 </FrameLayout>
                 
-            	<TabWidget 
-                    android:id="@android:id/tabs"
-                    android:layout_height="wrap_content" 
-                    android:layout_width="fill_parent"
-                    android:layout_weight="0">
+            	<TabWidget
+            	    android:id="@android:id/tabs"
+            	    android:layout_width="fill_parent"
+            	    android:layout_height="wrap_content"
+            	    android:layout_weight="0" >
+
                 </TabWidget>
                 
 

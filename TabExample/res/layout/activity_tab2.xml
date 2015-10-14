@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
-        
-        <TableRow
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/light_linen"
+    android:orientation="vertical" >
+
+    <TableRow
         android:id="@+id/tableRow10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:background="#000000"
-        android:padding="1dp">
+        android:padding="1dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,69 +27,114 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
             android:layout_weight="2"
-            android:padding="2dp"
-            android:textSize="13dp"
-            android:gravity="center_horizontal"
             android:background="#FFFFFF"
-            android:layout_marginLeft="1dp"        
-            android:text="            Name              " />
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="            Name              "
+            android:textSize="13dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
             android:layout_weight="1"
-            android:padding="2dp"
-            android:textSize="13dp"
-            android:gravity="center_horizontal"
             android:background="#FFFFFF"
-            android:layout_marginLeft="1dp"           
-            android:text="Touch" />
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Touch"
+            android:textSize="13dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
             android:layout_weight=".5"
-            android:padding="2dp"
-            android:textSize="13dp"
-            android:gravity="center_horizontal"
             android:background="#FFFFFF"
-            android:layout_marginLeft="1dp"          
-            android:text="URL" />
-        
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="URL"
+            android:textSize="13dp" />
 \
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5"
-            android:padding="2dp"
-            android:textSize="13dp"
-            android:gravity="center_horizontal"
-            android:background="#FFFFFF"
-            android:layout_marginLeft="1dp"          
-            android:text="Key" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5"
-            android:padding="2dp"
-            android:textSize="13dp"
-            android:gravity="center_horizontal"
-            android:background="#FFFFFF"
-            android:layout_marginLeft="1dp"          
-            android:text="RunTime" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight=".5"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Key"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight=".5"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="RunTime"
+            android:textSize="13dp" />
     </TableRow>
-    <ScrollView 
-    		android:layout_width="fill_parent"
-    			android:layout_height="fill_parent" >       	
-           <RelativeLayout
-        		android:layout_width="fill_parent"
-       			android:layout_height="fill_parent" >
-				 <TableLayout
-	                    
-	                    android:id="@+id/main_table" android:stretchColumns="1" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="match_parent">
-	            </TableLayout>
-            </RelativeLayout>
-	</ScrollView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="368dp"
+        android:layout_weight="0.55" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TableLayout
+                android:id="@+id/main_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:stretchColumns="1" >
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.29" >
+
+        <Button
+            android:id="@+id/buttonSaveData"
+            android:layout_width="138dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_blue"
+            android:text="Export Data"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/button_clear_data"
+            android:layout_width="138dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_blue"
+            android:text="Clear All Data"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewDir"
+        android:layout_width="298dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.44"
+        android:text="---"
+        android:textColor="#003366" />
+
 </LinearLayout>
